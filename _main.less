@@ -1,0 +1,969 @@
+// all colors are located in the header
+@background-header: rgb(42, 42, 42);
+@logoBackground: #f25f43;
+@i-border: #dc735e;
+@revers-form-background: rgba(42, 42, 42, 0.85);
+@i-color: #f25f43;
+@i-background: #292929;
+@i-background-hover: #f25f43;
+@i-color-hover: #292929;
+@i-boxShadow: #292929;
+@i-hover: #292929;
+@li-border-top: #f25f43;
+@li-border-left-right: rgba(41, 41, 41, 0.51);
+@li-color: #fff;
+@li-color-hover: #2a2a2a;
+@p-color: #fff;
+//--------------------------------------
+// all colors are located in the content
+@background-content: rgb(42, 42, 42);
+@background-sections: rgb(37, 37, 37);
+@background-voice-information-block: rgba(42, 42, 42, 0.9);
+@h6-color: #fff;
+@h5-color: #fff;
+@h4-color: #fff;
+@h3-color: #fff;
+@h2-color: #fffbfa;
+@span-color: #f25f43;
+@span-color-hover: #2a2a2a;
+@i-color: #f25f43;
+@i-border: #f25f43;
+@a-image-hover: #f25f43;
+@button-color: #f25f43;
+@button-color-hover: #2a2a2a;
+@button-background: #2a2a2a;
+@button-background-hover: #f25f43;
+@input-boxShadow: #2a2a2a;
+@input-border: #f25f43;
+@input-color: #fff;
+@button-border: #f25f43;
+@button-border-hover: #2a2a2a;
+@a-background: #f25f43;
+@a-color: #fffaf9;
+@a-color-hover: #2a2a2a;
+@background-iphone: #c3c3c3;
+@background-iphone-hover: #fff;
+//--------------------------------------
+// all colors are located in the footer
+@background-footer: #252525;
+@h3-color: #fff;
+@h2-color: #fffbfa;
+@i-color: #f25f43;
+@i-color-hover: #2a2a2a;
+@i-border: #f25f43;
+@i-border-hover: #2a2a2a;
+//--------------------------------------
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  outline: none;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+  outline: none;
+}
+
+body {
+  background: @background-header;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  position: relative;
+  min-width: 340px;
+  background: @background-header;
+  padding-top: 47px;
+}
+
+.feedback-form {
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+  z-index: 500;
+  min-width: 340px;
+  background: @background-header;
+  i {
+    width: 30px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px 1px;
+    margin-right: 5px;
+    color: @i-color;
+    background: @i-background;
+    border: 1px solid @i-border;
+    box-shadow: inset 0 0 1px 1px @i-boxShadow;
+    cursor: pointer;
+    &:hover {
+      background: @i-background-hover;
+      color: @i-color-hover;
+    }
+  }
+  p {
+    display: inline-block;
+    color: @p-color;
+    margin: 8px 2px;
+  }
+  span {
+    margin-left: 5px;
+    font-weight: 600;
+  }
+}
+
+.search-me {
+  position: relative;
+  display: inline-block;
+  left: 60px;
+}
+
+.location {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  text-align: center;
+  z-index: 5;
+  img {
+    width: 100%;
+  }
+}
+
+.reverse-form {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  z-index: 1;
+  text-align: center;
+  vertical-align: middle;
+  background: @revers-form-background;
+  h2 {
+    padding: 30px 0;
+    color: @h2-color;
+  }
+  input {
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px 1px @input-boxShadow;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    width: 25%;
+  }
+  button {
+    padding: 10px;
+    color: @button-color;
+    background: @button-background;
+    border: 1px solid @button-border;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover {
+      background: @i-background-hover;
+      color: @i-color-hover;
+    }
+  }
+}
+
+.to-find-me {
+  display: inline-block;
+  position: absolute;
+  right: 60px;
+  input {
+    color: @input-color;
+    padding: 8px 3px 4px 3px;
+    background: none;
+    font-size: 12px;
+    border: none;
+    text-align: right;
+  }
+  span > i {
+    background: none;
+    border: none;
+    cursor: inherit;
+    &:hover {
+      background: none;
+      color: @i-background-hover;
+    }
+  }
+}
+
+.voice-information-block {
+  position: fixed;
+  display: none;
+  right: 70px;
+  top: 140px;
+  z-index: 2;
+  padding: 5px;
+  line-height: 16px;
+  text-align: center;
+  width: 200px;
+  background: @background-voice-information-block;
+  border: 1px solid @span-color;
+  border-radius: 5px;
+  h6 {
+    color: @h6-color;
+  }
+  span {
+    color: @span-color;
+  }
+}
+
+.logo {
+  display: block;
+  text-align: right;
+  padding: 0 60px;
+  background: @logoBackground url("../img/background/logo.png") no-repeat left 60px center;
+  background-size: 85px;
+  li {
+    display: inline-table;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    &:hover {
+      font-weight: 600;
+      border-top: 3px solid @li-border-top;
+      margin-top: -3px;
+    }
+  }
+  a {
+    display: block;
+    width: 95px;
+    padding: 35px 2px;
+    color: @li-color;
+    text-decoration: none;
+    &:hover {
+      color: @li-color-hover;
+    }
+  }
+}
+
+.leftInformationBlock {
+  position: absolute;
+  left: 60px;
+  top: 140px;
+  z-index: 5;
+  line-height: 16px;
+  width: 240px;
+  background: @background-voice-information-block;
+  border: 1px solid @span-color;
+  border-radius: 5px;
+  text-align: center;
+  h5 {
+    padding: 5px 0;
+    color: @h5-color;
+  }
+  p {
+    color: @p-color;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  i {
+    float: right;
+    font-size: 20px;
+    text-align: right;
+    margin-left: 10px;
+    color: @i-color;
+  }
+}
+
+.scrollTrackingActive {
+  position: fixed;
+  left: 60px;
+  top: 45px;
+  z-index: 5;
+  width: 240px;
+  height: auto;
+  background: @background-voice-information-block;
+  border: 1px solid @span-color;
+  border-radius: 5px;
+  text-align: center;
+  h5 {
+    padding: 5px 0;
+    color: @h5-color;
+  }
+  p {
+    color: @p-color;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  i {
+    float: right;
+    font-size: 20px;
+    text-align: right;
+    margin-left: 10px;
+    color: @i-color;
+  }
+}
+
+.content {
+  position: relative;
+  display: block;
+  min-width: 340px;
+  background: @background-content;
+}
+
+.one-section {
+  display: block;
+  background: @background-sections;
+  text-align: center;
+  padding: 300px 0;
+  h3 {
+    font-size: 30px;
+    color: @h3-color;
+    padding: 10px 0;
+  }
+  h2 {
+    color: @h2-color;
+    font-weight: 700;
+    padding: 10px 0;
+  }
+  p {
+    text-transform: uppercase;
+    color: @p-color;
+    padding: 10px 0;
+    margin-bottom: 50px;
+  }
+  a {
+    background: @a-background;
+    color: @a-color;
+    border-radius: 3px;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin: 10px 0 90px 0;
+    text-decoration: none;
+    &:hover {
+      color: @a-color-hover;
+    }
+  }
+}
+
+.two-section {
+  position: relative;
+  background-color: @background-sections;
+  text-align: center;
+  padding-bottom: 40px;
+  ul {
+    padding: 0 45px;
+  }
+  li {
+    display: inline-block;
+    text-align: center;
+    width: 350px;
+    padding: 10px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  h2 {
+    text-align: center;
+    color: @h2-color;
+    padding: 30px 0;
+  }
+  a {
+    padding: 15px 0;
+    font-size: 20px;
+    color: @a-color;
+    font-weight: 900;
+    cursor: pointer;
+    text-align: center;
+    &:hover {
+      color: @a-image-hover;
+    }
+  }
+  span {
+    font-size: 30px;
+    color: @span-color;
+    font-weight: 900;
+  }
+  i {
+    color: @i-color;
+    margin: 0 10px;
+  }
+}
+
+.three-section {
+  position: relative;
+  background-color: @background-sections;
+  text-align: center;
+  z-index: 1;
+  padding-bottom: 30px;
+  h2 {
+    color: @h2-color;
+    padding: 30px 0;
+  }
+  span {
+    color: @span-color;
+    font-weight: 900;
+    font-size: 20px;
+  }
+  p {
+    font-size: 20px;
+    text-align: center;
+    color: @p-color;
+    word-wrap: break-word;
+    margin: 10px 150px 50px;
+    padding: 15px 50px;
+    line-height: 35px;
+  }
+}
+
+.two-container {
+  display: block;
+  position: relative;
+  img {
+    width: 1000px;
+    height: auto;
+  }
+}
+
+.four-section {
+  position: relative;
+  display: block;
+  background-color: @background-sections;
+  text-align: center;
+  p {
+    line-height: 35px;
+    margin: 0 170px 70px;
+    padding: 50px 0;
+    border-radius: 10px;
+    font-size: 20px;
+    color: @p-color;
+    background: rgba(51, 50, 48, 0.15);
+  }
+  span {
+    font-weight: 800;
+    color: @span-color;
+  }
+  h3 {
+    padding: 10px 0;
+  }
+}
+
+.iphone-block {
+  display: inline-flex;
+  position: relative;
+  margin-top: 150px;
+  h3 {
+    text-align: center;
+  }
+  h6 {
+    text-align: justify;
+    padding: 0 8px;
+    max-height: 130px;
+    overflow: hidden;
+  }
+}
+
+.work-info {
+  position: relative;
+  overflow: hidden;
+  ul {
+    display: block;
+    text-align: center;
+  }
+  li {
+    display: block;
+  }
+  img {
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+  }
+  h2 {
+    padding: 20px 0;
+    color: @h2-color;
+    text-transform: uppercase;
+  }
+  p {
+    display: inline-block;
+    padding: 50px 0;
+    width: 50%;
+    border: none;
+    text-align: left;
+    vertical-align: middle;
+    background: none;
+  }
+}
+
+.iphone-blue {
+  width: 200px;
+  height: 410px;
+  background: url("../img/main-container/IPhone-blue.png") no-repeat center;
+  background-size: 90%;
+}
+
+.iphone-yellow {
+  width: 200px;
+  height: 410px;
+  background: url("../img/main-container/IPhone-yellow.png") no-repeat center;
+  background-size: 100%;
+}
+
+.iphone-red {
+  width: 200px;
+  height: 410px;
+  background: url("../img/main-container/IPhone-red.png") no-repeat center;
+  background-size: 90%;
+}
+
+.left-window {
+  width: 145px;
+  height: 260px;
+  margin: 76px 28px 0;
+  background: url("../img/main-container/theme-iphone.png") center no-repeat;
+  background-size: 100%;
+}
+
+.center-window {
+  width: 160px;
+  height: 285px;
+  margin: 63px 20px 0;
+  background: url("../img/main-container/theme-iphone-center.png") center no-repeat;
+  background-size: 100%;
+}
+
+.right-window {
+  width: 145px;
+  height: 260px;
+  margin: 76px 28px 0;
+  background: url("../img/main-container/theme-iphone.png") center no-repeat;
+  background-size: 100%;
+}
+
+.assistance-unit {
+  position: relative;
+  text-align: center;
+  z-index: 3;
+  ul {
+    display: block;
+    padding: 50px 150px;
+  }
+  li {
+    display: inline-block;
+    width: 20%;
+    color: @li-color;
+    padding: 10px 0;
+  }
+  h2 {
+    color: @h2-color;
+    padding: 50px 0;
+  }
+  h3 {
+    color: @h2-color;
+    padding: 30px 0;
+  }
+  a {
+    text-decoration: none;
+    color: @a-color;
+  }
+}
+
+.footer {
+  position: relative;
+  min-width: 340px;
+  text-align: center;
+  background: @background-footer;
+  background-size: cover;
+  z-index: 1;
+}
+
+.up-scroll {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 3;
+  i {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    font-size: 35px;
+    cursor: pointer;
+    background: @i-background;
+    border: 1px solid @i-border;
+    color: @i-color;
+    &:hover {
+      background: @i-background-hover;
+      color: @i-color-hover;
+      box-shadow: inset 0 0 2px 2px @i-border-hover;
+    }
+  }
+}
+
+.cssload-tetrominos {
+  display: none;
+}
+
+//@media (max-width: 1200px) {
+//  .to-find-me {
+//    text-align: right;
+//    p {
+//      margin-left: 0;
+//    }
+//  }
+//
+//  .feedback-form {
+//    i {
+//      width: 20px;
+//    }
+//    p {
+//      font-size: 12px;
+//    }
+//  }
+//
+//  .logo {
+//    display: block;
+//    text-align: right;
+//    margin-left: 0;
+//    li {
+//      font-size: 12px;
+//    }
+//  }
+//
+//  .voice-information-block {
+//    top: 135px;
+//  }
+//
+//  .leftInformationBlock {
+//    top: 140px;
+//  }
+//
+//  .four-section p {
+//    font-size: 18px;
+//  }
+//
+//  .three-section {
+//    h2 {
+//      padding: 25px 0;
+//    }
+//    p {
+//      margin: 0 50px;
+//    }
+//    span {
+//      font-size: 22px;
+//    }
+//  }
+//
+//  .iphone-block h6 {
+//    max-height: 115px;
+//    overflow: hidden;
+//  }
+//
+//  .two-container img {
+//    width: 800px;
+//  }
+//
+//  .assistance-unit {
+//    ul {
+//      padding: 50px;
+//    }
+//    h2 {
+//      padding: 50px 0 0;
+//    }
+//  }
+//}
+//
+//@media (max-width: 980px) {
+//  .header {
+//    padding-top: 48px;
+//    font-size: 13px;
+//  }
+//
+//  .location {
+//    height: 110px;
+//    margin-left: -1%;
+//  }
+//
+//  .search-me {left: 5px;}
+//
+//  .feedback-form {
+//    padding: 0 5px;
+//    p {
+//      font-size: 10px;
+//      margin: 12px 0;
+//    }
+//    i {
+//      padding: 3px 0;
+//    }
+//  }
+//
+//  .reverse-form {
+//    margin-left: -1%;
+//  }
+//
+//  .logo {
+//    background-size: 55px;
+//    text-align: right;
+//    padding-right: 5px;
+//    background-position: left 2% center;
+//    margin-left: 0;
+//    li {
+//      display: inline-table;
+//      font-size: 10px;
+//    }
+//    a {
+//      width: 67px;
+//      padding: 24px 2px;
+//    }
+//  }
+//
+//  .to-find-me {
+//    right: 5px;
+//    margin-left: 0;
+//    input {
+//      width: 80px;
+//      font-size: 8px;
+//    }
+//  }
+//
+//  .scrollTrackingActive {
+//    top: 44px;
+//    left: 5px;
+//    width: 160px;
+//    h5 {
+//      padding: 5px 0;
+//      font-size: 10px;
+//    }
+//    p {
+//      padding: 5px;
+//      font-size: 10px;
+//    }
+//  }
+//
+//  .leftInformationBlock {
+//    top: 44px;
+//    left: 5px;
+//    width: 160px;
+//    h5 {
+//      padding: 5px 0;
+//      font-size: 10px;
+//    }
+//    p {
+//      padding: 5px;
+//      font-size: 10px;
+//    }
+//  }
+//
+//  .one-section {
+//    padding: 50px 0;
+//    button {
+//      padding: 8px 15px;
+//      margin: 10px 0 50px 0;
+//    }
+//    p {
+//      padding: 0 70px;
+//      font-size: 15px;
+//    }
+//  }
+//
+//  .two-section {
+//    a {
+//      padding: 8px 20px;
+//    }
+//    ul {
+//      padding: 0;
+//    }
+//    li {
+//      width: 80%;
+//      padding: 0;
+//    }
+//    h2 {
+//      padding: 25px 0;
+//      font-size: 20px;
+//    }
+//    span {
+//      font-size: 25px;
+//    }
+//    img {
+//      width: 90%;
+//    }
+//  }
+//
+//  .three-section {
+//    h2 {
+//      font-size: 20px;
+//      padding: 20px 0 0;
+//    }
+//    p {
+//      margin: 0 20px;
+//    }
+//    span {
+//      font-size: 20px;
+//    }
+//  }
+//
+//  .work-info {
+//    p {
+//      margin-left: 0;
+//      width: 340px;
+//    }
+//    img {
+//      margin-right: 0;
+//    }
+//    h2 {
+//      margin-top: 15px;
+//    }
+//  }
+//
+//  .two-container {
+//    padding: 20% 0;
+//    img {
+//      width: 500px;
+//      height: auto;
+//    }
+//  }
+//
+//  .iphone-block h6 {
+//    max-height: 74px;
+//    overflow: hidden;
+//  }
+//
+//  .iphone-blue {width: 150px;}
+//  .iphone-yellow {width: 155px;}
+//  .iphone-red {width: 150px;}
+//
+//  .left-window {
+//    width: 110px;
+//    height: 210px;
+//    margin: 100px 21px 0;
+//  }
+//
+//  .center-window {
+//    height: 237px;
+//    margin: 88px 13px 0;
+//    width: 130px;
+//  }
+//
+//  .right-window {
+//    width: 110px;
+//    height: 210px;
+//    margin: 100px 21px 0;
+//  }
+//
+//  .four-section {
+//    padding: 50px 5px;
+//    p {
+//      padding: 10px 45px;
+//      font-size: 15px;
+//      margin: 0;
+//    }
+//  }
+//
+//  .assistance-unit {
+//    ul {
+//      margin-top: 100px;
+//      padding: 50px 10px;
+//    }
+//    li {
+//      width: 22%;
+//    }
+//    h2 {
+//      padding: 25px 0;
+//      font-size: 20px;
+//    }
+//    h3 {
+//      font-size: 15px;
+//      padding: 25px 0;
+//    }
+//  }
+//
+//  .up-scroll i {
+//    width: 35px;
+//    height: 35px;
+//    font-size: 190%;
+//  }
+//}
+//
+//@media (max-width: 490px) {
+//  .logo a {
+//    width: 43px;
+//    padding: 24px 2px;
+//  }
+//
+//  .search-me p {
+//    display: none;
+//  }
+//
+//  .to-find-me input {
+//    width: 145px;
+//    text-align: center;
+//    font-size: 9px;
+//    text-transform: uppercase;
+//  }
+//
+//  .feedback-form {
+//    height: 45px;
+//  }
+//
+//  .three-section p {
+//    margin: 0 5px;
+//  }
+//
+//  .two-container img {
+//    width: 300px;
+//  }
+//
+//  .iphone-block {
+//    margin-top: 0;
+//  }
+//
+//  .iphone-blue {
+//    width: 60px;
+//  }
+//
+//  .iphone-yellow {
+//    width: 120px;
+//  }
+//
+//  .iphone-red {
+//    width: 60px;
+//  }
+//
+//  .left-window {
+//    width: 59px;
+//    height: 128px;
+//    margin: 143px 0 0;
+//    background-size: 79%;
+//  }
+//
+//  .center-window {
+//    height: 235px;
+//    margin: 88px 10px 0;
+//    width: 100px;
+//  }
+//
+//  .right-window {
+//    width: 59px;
+//    height: 128px;
+//    margin: 143px 0 0;
+//    background-size: 79%;
+//  }
+//}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-width: 1px 1px 1px 2px;
+  border-color: #777;
+  border-radius: 4px;
+  background-color: #f25f43;
+  box-shadow: inset 0 0 1px 1px black;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    border-width: 1px 1px 1px 2px;
+    box-shadow: inset 0 0 1px 1px black;
+    background-color: #cb4f38;
+  }
+}
+

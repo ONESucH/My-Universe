@@ -1,0 +1,923 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.one-section {
+  position: relative;
+  background-image: url(../dist/one-section/logo_3.png);
+  background-position: center bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 42.9%;
+  background-color: #f4f5f6;
+}
+.one-section ul {
+  margin: 0;
+  padding-top: 3%;
+}
+.one-section li {
+  display: inline-block;
+  color: #26272d;
+  padding: 0.5%;
+  cursor: pointer;
+  text-align: center;
+}
+.one-section li:nth-child(1) {
+  margin-left: 15%;
+  padding: 0 1% 0 1%;
+}
+.one-section li:nth-child(5) {
+  margin-left: 8%;
+  margin-right: 8%;
+  font-size: 120%;
+}
+.one-section li:nth-child(8) {
+  border-radius: 20px;
+  background: #267df4;
+  color: white;
+  width: 8%;
+  padding: 0.5% 0.2% 0.5% 0.2%;
+}
+.one-section li:nth-child(8) i {
+  margin-right: 10%;
+}
+.one-section span {
+  font-size: 100%;
+  font-weight: 900;
+  color: #26272d;
+}
+.one-section h1 {
+  text-align: center;
+  font-size: 350%;
+  font-weight: 500;
+  margin: 5% 0 3% 0;
+}
+.one-section p {
+  text-align: center;
+  width: 40%;
+  margin: 0 30% 5% 30%;
+  color: #8c8f94;
+}
+.one-section a {
+  margin-left: 43%;
+  text-decoration: none;
+  color: black;
+  border: 1px solid silver;
+  border-radius: 20px;
+  padding: 0.5% 2% 0.5% 2%;
+}
+.one-section a:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+.one-section a i {
+  margin-right: 0.5%;
+}
+.two-section {
+  position: relative;
+  background-color: #fff;
+}
+.two-section ul {
+  display: inline-flex;
+  margin: 0 15% 0 15%;
+  border-bottom: 1px solid #f4f4f4;
+  padding-top: 4%;
+}
+.two-section li {
+  display: inline-block;
+  color: #26272d;
+  width: 43%;
+  height: auto;
+  padding: 15% 3%;
+}
+.two-section li:nth-child(1) {
+  background-image: url(../dist/two-section/lock_1.png);
+  background-position: top 15% left 6%;
+  background-size: 8%;
+  background-repeat: no-repeat;
+}
+.two-section li:nth-child(2) {
+  background-image: url(../dist/two-section/klock_2.png);
+  background-position: top 15% left 6%;
+  background-size: 8%;
+  background-repeat: no-repeat;
+}
+.two-section p {
+  margin-bottom: 8%;
+  color: #8c8f94;
+}
+.three-section {
+  position: relative;
+  display: inline-flex;
+  padding-top: 10%;
+}
+.three-section .image-iphone {
+  background-image: url(../dist/three-section/iphone_image.png);
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 50%;
+}
+.three-section ul {
+  width: 50%;
+}
+.three-section li {
+  list-style: none;
+  color: #26272d;
+  margin: 18% 0 20% 10%;
+  width: 65%;
+}
+.three-section h1 {
+  width: 55%;
+  font-weight: 500;
+  margin-bottom: 15%;
+}
+.three-section button {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 6%;
+  padding: 1.5% 2% 1.5% 2%;
+  border: none;
+  outline: none;
+  margin-right: 5%;
+  border-radius: 20px;
+}
+.three-section p {
+  color: #8c8f94;
+  margin-bottom: 8%;
+}
+.one-button {
+  background: #267df4;
+  color: white;
+  width: 35%;
+}
+.one-button i {
+  margin-left: 15%;
+}
+.two-button {
+  color: black;
+  width: 25%;
+}
+.four-section {
+  position: relative;
+  display: inline-flex;
+  padding-top: 10%;
+}
+.four-section .image-iphone {
+  background-image: url(../dist/four-section/world_map.png);
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 50%;
+}
+.four-section ul {
+  width: 50%;
+}
+.four-section li {
+  list-style: none;
+  color: #26272d;
+  margin: 0 0 20% 25%;
+  width: 65%;
+}
+.four-section h1 {
+  width: 55%;
+  font-weight: 500;
+  margin-bottom: 15%;
+}
+.four-section p {
+  color: #8c8f94;
+  margin-bottom: 8%;
+}
+.four-section h5 {
+  background-image: url(../dist/four-section/elephant.png), url(../dist/four-section/dropbox.png);
+  background-position: left 40% bottom, left bottom;
+  background-size: 25%, 25%;
+  background-repeat: no-repeat;
+  padding-bottom: 10%;
+  font-weight: 900;
+}
+.five-section {
+  position: relative;
+  text-align: center;
+  padding: 10% 0 10% 0;
+  background-image: url(../dist/five-section/iphones.png);
+  background-position: top 35% center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #f5f5f8;
+}
+.five-section h1 {
+  font-weight: 500;
+  margin: 2%;
+}
+.five-section h5 {
+  font-weight: 500;
+  margin: 2% 2% 60% 2%;
+  color: #8c8f94;
+}
+.five-section h6 {
+  color: #b3b4b9;
+  margin-bottom: 2%;
+}
+.decoration-block {
+  position: relative;
+  background: #267df4;
+  margin: 0 48% 0 48%;
+  padding: 0.2%;
+}
+.mail-block {
+  margin: 5% 30% 5% 30%;
+  border: 1px solid #cdcdd1;
+  border-radius: 30px;
+  padding: 0.2% 0.2% 0.2% 1%;
+}
+.mail-block input {
+  display: inline-block;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 3% 3% 3% 3%;
+  width: 58%;
+}
+.mail-block button {
+  display: inline-block;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background-color: #6fc754;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 3% 5% 3% 5%;
+  width: 35%;
+}
+.mail-block i {
+  font-size: 120%;
+}
+.button-app-store {
+  width: 15%;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background-color: #131315;
+  color: white;
+  padding: 1% 1.5% 1% 1.5%;
+  font-weight: 900;
+  cursor: pointer;
+}
+.button-app-store span {
+  float: left;
+  margin-right: 6%;
+  font-size: 200%;
+}
+.six-section {
+  position: relative;
+  text-align: center;
+}
+.six-section span {
+  color: #f2bc3b;
+  font-size: 100%;
+}
+.six-section i {
+  margin: 0 .3% 0 .3%;
+}
+.six-section p {
+  width: 36%;
+  margin: 1.5% 32% 1.5% 32%;
+  color: #8c8f94;
+}
+.six-section h5 {
+  font-size: 60%;
+  margin: 5%;
+  color: #d4d4d5;
+}
+.carousel {
+  position: relative;
+  display: inline-table;
+  width: 100%;
+}
+.carousel i {
+  display: table-cell;
+  padding: 5%;
+  height: auto;
+  color: #d4d4d5;
+  font-size: 500%;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.carousel-of-three-pictures {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-of-three-pictures img {
+  border-radius: 50%;
+  float: left;
+  margin: 0.4% 0.4% 0.4% 1.4%;
+  width: 18%;
+  animation: rotate 10s infinite linear;
+  cursor: pointer;
+  transform: rotateZ(-10deg);
+}
+.carousel-of-three-pictures img:hover {
+  animation-play-state: paused;
+  border: 1px solid orange;
+}
+.seven-section {
+  position: relative;
+  display: inline-flex;
+  background: #f4f4f5;
+  width: 100%;
+  padding-top: 10%;
+}
+.choose-your-perfect-plan {
+  position: relative;
+  width: 33.333%;
+  margin: 0 0 10% 10%;
+  padding-top: 5%;
+}
+.choose-your-perfect-plan h1 {
+  width: 80%;
+  font-weight: 500;
+  margin-bottom: 16%;
+}
+.choose-your-perfect-plan h5 {
+  padding: 15% 0 15% 0;
+  color: #8c8f94;
+}
+.choose-your-perfect-plan p {
+  margin-top: 15%;
+  color: #a9abaf;
+}
+.choose-your-perfect-plan a {
+  margin-left: 3%;
+  color: #267df4;
+  cursor: pointer;
+}
+.two_button {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 0.2%;
+  border: 1px solid silver;
+  background: #f4f4f5;
+  margin-top: 5%;
+}
+.two_button button {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 5% 5% 5% 4%;
+  border-radius: 20px;
+  color: #cacacb;
+  cursor: pointer;
+}
+.two_button button:hover {
+  background: white;
+  color: #26292c;
+  box-shadow: 0 0 15px 1px silver;
+}
+.starter-block {
+  position: relative;
+  width: 33.333%;
+  margin: 0 0 10% 10%;
+  background: #fff;
+  text-align: center;
+  padding-top: 5%;
+  box-shadow: 8px 8px 30px 5px silver;
+  z-index: 2;
+}
+.starter-block h1 {
+  margin-bottom: 8%;
+  font-weight: 500;
+  color: #6b6c6f;
+}
+.starter-block h4 {
+  color: #26292c;
+  margin: 6% 0 6% 0;
+}
+.starter-block a {
+  color: #26272d;
+  text-decoration: none;
+  border: 1px solid #dededf;
+  padding: 2% 8% 2% 8%;
+  border-radius: 20px;
+}
+.starter-block i {
+  color: #6fc754;
+  margin-right: 1.5%;
+}
+.starter-block p {
+  margin: 20% 20% 8% 20%;
+  color: #8c8f94;
+}
+.starter-block button {
+  color: #ebebed;
+  background: #267df4;
+  border-radius: 20px;
+  padding: 3% 12% 3% 12%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 6.5%;
+}
+.pro-block {
+  position: relative;
+  width: 33.333%;
+  margin: 2% 10% 11% 0;
+  text-align: center;
+  padding-top: 3%;
+  background-color: #ebebed;
+  z-index: 1;
+}
+.pro-block h1 {
+  margin-bottom: 8%;
+  font-weight: 500;
+  color: #6b6c6f;
+}
+.pro-block h4 {
+  color: #26292c;
+  margin: 6% 0 6% 0;
+}
+.pro-block a {
+  color: #26272d;
+  text-decoration: none;
+  border: 1px solid #dededf;
+  padding: 2% 8% 2% 8%;
+  border-radius: 20px;
+}
+.pro-block i {
+  color: #6fc754;
+  margin-right: 1.5%;
+}
+.pro-block p {
+  margin: 20% 20% 8% 20%;
+  color: #8c8f94;
+}
+.pro-block button {
+  text-decoration: none;
+  color: #4c8df3;
+  padding: 3% 12% 3% 12%;
+  border-radius: 20px;
+  border: 1px solid #267df4;
+  background: none;
+}
+.eight-section {
+  position: relative;
+  background-color: #fff;
+  padding-bottom: 5%;
+}
+.eight-section h1 {
+  text-align: center;
+  padding: 3% 0 3% 0;
+  color: #26292c;
+}
+.eight-section h5 {
+  text-align: center;
+  color: #8c8f94;
+}
+.mail-block-two {
+  margin: 0 30% 2% 30%;
+  border: 1px solid #cdcdd1;
+  border-radius: 30px;
+  padding: 0.2% 0.2% 0.2% 1%;
+}
+.mail-block-two input {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 2%;
+  width: 53%;
+}
+.mail-block-two button {
+  width: 42.1%;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background-color: #6fc754;
+  color: white;
+  padding: 3% 1.5% 3% 1.5%;
+  font-weight: 900;
+  cursor: pointer;
+}
+.nine-section {
+  position: relative;
+  padding: 5% 0 8% 0;
+  border-bottom: 1px solid #f4f4f4;
+  border-top: 1px solid #f4f4f4;
+  margin: 0 10% 0 10%;
+}
+.nine-section ul {
+  display: inline-block;
+  padding: 0;
+  width: 55%;
+  margin-left: 14%;
+  text-align: center;
+}
+.nine-section li {
+  display: inline-block;
+  padding: 1.5% .5% 1.5% .5%;
+  width: 25%;
+  cursor: pointer;
+  font-size: 90%;
+  font-weight: 900;
+  color: #26272d;
+}
+.nine-section li:nth-child(n+4) {
+  color: #adafb2;
+}
+.new-providence {
+  display: inline-block;
+  width: 30%;
+}
+.new-providence h1 {
+  font-family: sans-serif;
+  color: #8b8c8f;
+  font-size: 120%;
+  padding: 5% 0 5% 0;
+}
+.new-providence h1 span {
+  font-weight: 900;
+  color: #26272d;
+}
+.new-providence p {
+  color: #adafb2;
+}
+.contacts-date {
+  text-align: left;
+}
+.contacts-date i {
+  padding: 2% 8% 2% 0;
+  font-size: 140%;
+  color: #bdbec0;
+  cursor: pointer;
+}
+.button-app-store-two {
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 45%;
+  background-color: #131315;
+  color: white;
+  padding: 3% .5% 3% .5%;
+  font-weight: 900;
+  cursor: pointer;
+  margin: 6% 0;
+}
+.button-app-store-two span {
+  float: left;
+  margin-right: 1%;
+  font-size: 200%;
+}
+.ten-section {
+  position: relative;
+  background-image: url(../dist/ten-section/graft_work.png);
+  background-position: right 15% center;
+  background-size: 20%;
+  background-repeat: no-repeat;
+}
+.ten-section p {
+  width: 40%;
+  color: #94979b;
+  padding: 3% 10% 3% 10%;
+}
+.ten-section a {
+  font-size: 85%;
+  color: #3b55e6;
+}
+@media (max-width: 1103px) {
+  .one-section {
+    padding-bottom: 30.9%;
+  }
+  .one-section li:nth-child(5) {
+    margin: 0 4% 0 4%;
+  }
+  .one-section li:nth-child(8) {
+    width: 10%;
+  }
+  .one-button {
+    width: 45%;
+  }
+  .two-button {
+    width: 35%;
+  }
+  .mail-block i {
+    margin-left: 18%;
+  }
+  .mail-block-two {
+    width: 49%;
+  }
+  .three-section {
+    background-size: 10%;
+  }
+  .three-section h1 {
+    width: 100%;
+  }
+  .four-section h1 {
+    width: 100%;
+  }
+  .button-app-store {
+    width: 17%;
+  }
+  .button-app-store-two {
+    width: 100%;
+  }
+}
+@media (max-width: 980px) {
+  .one-section ul {
+    font-size: 80%;
+  }
+  .one-section h1 {
+    font-size: 200%;
+  }
+  .one-section p {
+    margin: 0 20% 5% 20%;
+    width: 60%;
+  }
+  .one-section a {
+    margin-left: 38%;
+  }
+  .two-section ul {
+    display: inline-flex;
+    margin: 0 5% 0 5%;
+  }
+  .two-section li:nth-child(2) {
+    background-position: top 10% left 6%;
+    background-size: 8%;
+  }
+  .two-section li:nth-child(2) {
+    background-position: top 10% left 6%;
+    background-size: 8%;
+  }
+  .three-section ul {
+    width: 70%;
+  }
+  .three-section li {
+    list-style: none;
+    color: #26272d;
+    margin: 10% 0 2% 6%;
+    width: 85%;
+  }
+  .image-iphone {
+    width: 42%;
+  }
+  .one-button {
+    width: 50%;
+  }
+  .two-button {
+    width: 38%;
+  }
+  .four-section li {
+    margin: 0 0 15% 15%;
+    width: 75%;
+  }
+  .four-section h5 {
+    background-position: left 60% bottom, left bottom;
+    background-size: 30%, 30%;
+  }
+  .mail-block {
+    margin: 5% 21% 5% 21%;
+  }
+  .mail-block input {
+    width: 50%;
+  }
+  .mail-block button {
+    padding: 3% 1% 3% 1%;
+    width: 42%;
+  }
+  .button-app-store {
+    width: 26%;
+  }
+  .six-section p {
+    width: 60%;
+    margin: 1.5% 20% 1.5% 20%;
+  }
+  .starter-block {
+    margin: 0 0 45% 10%;
+  }
+  .starter-block h1 {
+    font-size: 150%;
+  }
+  .pro-block {
+    margin: 2% 3% 47% 0;
+  }
+  .pro-block h1 {
+    font-size: 150%;
+  }
+  .seven-section {
+    padding-top: 5%;
+  }
+  .choose-your-perfect-plan {
+    margin: 0 0 10% 5%;
+  }
+  .choose-your-perfect-plan h1 {
+    width: 100%;
+    font-size: 160%;
+  }
+  .choose-your-perfect-plan h5 {
+    padding: 15% 0;
+  }
+  .mail-block-two {
+    margin: 0 19% 2% 19%;
+  }
+  .mail-block-two input {
+    width: 52%;
+  }
+  .contacts-date i {
+    padding: 2% 1% 2% 0;
+  }
+  .nine-section {
+    margin: 0 5% 0 5%;
+  }
+  .nine-section ul {
+    font-size: 70%;
+  }
+  .nine-section li {
+    width: 30%;
+  }
+  .ten-section p {
+    font-size: 85%;
+  }
+}
+@media (max-width: 580px) {
+  .one-section {
+    text-align: center;
+  }
+  .one-section h1 {
+    font-size: 140%;
+  }
+  .one-section li {
+    font-size: 50%;
+    padding: 0.1%;
+  }
+  .one-section li:nth-child(1) {
+    margin-left: 0;
+  }
+  .one-section li:nth-child(5) {
+    margin: 0 1% 0 1%;
+    font-size: 68%;
+  }
+  .one-section li:nth-child(8) {
+    width: 15%;
+  }
+  .one-section a {
+    margin: 0 29% 0 29%;
+  }
+  .one-section p {
+    width: 100%;
+    margin: 6% 0 6% 0;
+  }
+  .two-section ul {
+    margin: 0;
+  }
+  .two-section li:nth-child(1) {
+    background-size: 15%;
+    padding-top: 28%;
+  }
+  .two-section li:nth-child(2) {
+    background-position: top 10% left 6%;
+    background-size: 15%;
+    padding-top: 28%;
+  }
+  .three-section {
+    display: block;
+    width: 100%;
+  }
+  .three-section ul {
+    width: 90%;
+    text-align: center;
+  }
+  .three-section li {
+    margin: 0;
+    width: 100%;
+    padding: 5%;
+  }
+  .three-section button {
+    padding: 1.5% 1.5% 1.5% 1.5%;
+  }
+  .three-section .image-iphone {
+    background-position: left center;
+    background-size: 80%;
+    width: 100%;
+    padding-bottom: 78%;
+  }
+  .four-section {
+    display: block;
+    width: 100%;
+  }
+  .four-section ul {
+    width: 100%;
+  }
+  .four-section li {
+    margin: 0;
+    width: 100%;
+    padding: 5% 0 5% 0;
+    text-align: center;
+  }
+  .four-section h5 {
+    background-position: left 80% bottom, left 20% bottom;
+  }
+  .four-section .image-iphone {
+    background-position: center;
+    background-size: 100%;
+    width: 100%;
+    padding-bottom: 78%;
+  }
+  .five-section {
+    background-position: top 30% center;
+  }
+  .five-section h5 {
+    margin: 2% 2% 75% 2%;
+  }
+  .mail-block {
+    margin: 5%;
+  }
+  .mail-block input {
+    width: 50%;
+  }
+  .mail-block button {
+    width: 42%;
+    padding: 3% 2% 2.8% 2%;
+  }
+  .button-app-store {
+    width: 50%;
+  }
+  .carousel i {
+    font-size: 300%;
+  }
+  .six-section p {
+    width: 100%;
+    margin: 0;
+  }
+  .seven-section {
+    display: block;
+    width: 100%;
+  }
+  .choose-your-perfect-plan {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .choose-your-perfect-plan h1 {
+    width: 100%;
+  }
+  .starter-block {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 5%;
+    box-shadow: none;
+  }
+  .starter-block h1 {
+    width: 100%;
+  }
+  .pro-block {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 5%;
+  }
+  .pro-block h1 {
+    width: 100%;
+  }
+  .mail-block-two {
+    margin: 0 25% 2% 25%;
+  }
+  .mail-block-two input {
+    width: 51%;
+  }
+  .new-providence {
+    width: 100%;
+  }
+  .contacts-date i {
+    padding: 2% 7% 2% 0;
+  }
+  .nine-section ul {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .nine-section li {
+    width: 30%;
+    font-size: 55%;
+  }
+  .ten-section p {
+    font-size: 60%;
+  }
+}
+@keyframes rotate {
+  50% {
+    transform: rotateZ(20deg);
+  }
+}
+@-webkit-keyframes rotate {
+  50% {
+    transform: rotateZ(20deg);
+  }
+}
