@@ -1,24 +1,23 @@
 body {
     font-family: sans-serif;
-    font-size: 16px;
-    min-width: 340px;
     position: relative;
     font-family: "RobotoRegular", sans-serif;
     overflow-x: hidden;
 }
+
 .header {
     position: relative;
-    background: #292929;
+    padding-top: 47px
 }
+
 .feedback-form {
     position: fixed;
     display: block;
     width: 100%;
-    height: 42px;
-    background: #292929;
     top: 0;
     z-index: 500
 }
+
 .feedback-form i {
     width: 30px;
     -webkit-border-radius: 3px;
@@ -33,24 +32,29 @@ body {
     box-shadow: inset 0 0 1px 1px #292929;
     cursor: pointer
 }
+
 .feedback-form i:hover {
     background: #f25f43;
     color: #2a2a2a
 }
+
 .feedback-form p {
     display: inline-block;
     color: #fff;
     margin: 8px 2px
 }
+
 .feedback-form span {
     margin-left: 5px;
     font-weight: 600
 }
+
 .search-me {
     position: relative;
     display: inline-block;
     left: 60px
 }
+
 .location, .reverse-form {
     display: none;
     width: 100%;
@@ -58,21 +62,26 @@ body {
     text-align: center;
     position: absolute
 }
+
 .location {
     z-index: 5
 }
+
 .location img {
     width: 100%
 }
+
 .reverse-form {
     z-index: 1;
     vertical-align: middle;
     background: rgba(42, 42, 42, .85)
 }
+
 .reverse-form h2 {
     padding: 30px 0;
     color: #fffbfa
 }
+
 .reverse-form input {
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -80,8 +89,10 @@ body {
     box-shadow: inset 0 0 1px 1px #2a2a2a;
     border: none;
     padding: 10px;
-    margin: 10px
+    margin: 10px;
+    width: 25%
 }
+
 .reverse-form button {
     padding: 10px;
     color: #f25f43;
@@ -91,15 +102,18 @@ body {
     -webkit-border-radius: 5px;
     border-radius: 5px
 }
+
 .reverse-form button:hover {
     background: #f25f43;
     color: #2a2a2a
 }
+
 .to-find-me {
     display: inline-block;
     position: absolute;
     right: 60px
 }
+
 .to-find-me input {
     color: #fff;
     padding: 8px 3px 4px;
@@ -108,20 +122,24 @@ body {
     border: none;
     text-align: right
 }
+
 .to-find-me span > i {
     background: 0 0;
     border: none;
     cursor: inherit
 }
+
 .leftInformationBlock, .voice-information-block {
     top: 140px;
     line-height: 16px;
     border: 1px solid #f25f43
 }
+
 .to-find-me span > i:hover {
     background: 0 0;
     color: #f25f43
 }
+
 .voice-information-block {
     position: fixed;
     display: none;
@@ -134,12 +152,15 @@ body {
     -webkit-border-radius: 5px;
     border-radius: 5px
 }
+
 .voice-information-block h6 {
     color: #fff
 }
+
 .voice-information-block span {
     color: #f25f43
 }
+
 .logo {
     display: block;
     text-align: right;
@@ -147,6 +168,7 @@ body {
     background: url("img/background/logo.png") left 60px center no-repeat #f25f43;
     background-size: 85px
 }
+
 .logo li {
     display: inline-table;
     list-style: none;
@@ -154,17 +176,20 @@ body {
     cursor: pointer;
     font-weight: 700
 }
+
 .logo li:hover {
     font-weight: 600;
     border-top: 3px solid #f25f43;
     margin-top: -3px
 }
+
 .logo a {
     display: block;
     width: 95px;
     padding: 35px 2px;
     color: #fff
 }
+
 .leftInformationBlock, .scrollTrackingActive {
     left: 60px;
     z-index: 5;
@@ -175,21 +200,25 @@ body {
 .logo a:hover {
     color: #2a2a2a
 }
+
 .leftInformationBlock {
     position: absolute;
     -webkit-border-radius: 5px;
     border-radius: 5px;
     text-align: center
 }
+
 .leftInformationBlock h5 {
     padding: 5px 0;
     color: #fff
 }
+
 .leftInformationBlock p {
     color: #fff;
     font-size: 16px;
     padding: 5px 10px
 }
+
 .leftInformationBlock i {
     float: right;
     font-size: 20px;
@@ -197,6 +226,7 @@ body {
     margin-left: 10px;
     color: #f25f43
 }
+
 .scrollTrackingActive {
     position: fixed;
     top: 45px;
@@ -206,15 +236,18 @@ body {
     border-radius: 5px;
     text-align: center
 }
+
 .scrollTrackingActive h5 {
     padding: 5px 0;
     color: #fff
 }
+
 .scrollTrackingActive p {
     color: #fff;
     font-size: 16px;
     padding: 5px 10px
 }
+
 .scrollTrackingActive i {
     float: right;
     font-size: 20px;
@@ -222,33 +255,39 @@ body {
     margin-left: 10px;
     color: #f25f43
 }
+
 .content {
     position: relative;
     display: block;
     background: #2a2a2a
 }
+
 .one-section {
     display: block;
     background: #252525;
     text-align: center;
     padding: 300px 0
 }
+
 .one-section h3 {
     font-size: 30px;
     color: #fff;
     padding: 10px 0
 }
+
 .one-section h2 {
     color: #fffbfa;
     font-weight: 700;
     padding: 10px 0
 }
+
 .one-section p {
     text-transform: uppercase;
     color: #fff;
     padding: 10px 0;
     margin-bottom: 50px
 }
+
 .one-section a {
     background: #f25f43;
     color: #fffaf9;
@@ -258,6 +297,7 @@ body {
     cursor: pointer;
     margin: 10px 0 90px
 }
+
 .one-section a:hover {
     color: #2a2a2a
 }
