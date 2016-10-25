@@ -1,33 +1,35 @@
 'use strict';
-
 var reverseForm = $('.reverse-form'),
     searchMeLocation = $('#searchMeLocation'),
     feedbackForm = $('#feedbackForm'),
     locationBlock = $('.location'),
-    voiceInformationBlock = $('.voice-information-block'),
     header = $('.header'),
     finalResultVoice = $('#finalResultVoice'),
     microphone = $('#microphone'),
+    rightTopBlock = $('.voice-information-block'),
     dataStorage = ['связаться с автором', 'найти автора на карте', 'найти автора'],
     recognizer = new webkitSpeechRecognition(),
     upScroll = $('.up-scroll'),
     logo = $('.logo'),
     logic = true;
 
+/*** Initialization ***/
+new WOW().init();
 recognizer.lang = 'ru-Ru';
 recognizer.interimResults = true;
 
 /*** Information blocks for voice control ***/
-inspectionScreenBrowser();
-function inspectionScreenBrowser () {
+/*** Max and min width screen ***/
+test();
+function test() {
     var widthScreenBrowser = window.innerWidth;
-    if (widthScreenBrowser < 980) {
+    if (widthScreenBrowser <= 490) {
+        rightTopBlock.css({'display':'none'});
         return false;
     } else {
         renderingInformationBlock();
     }
 }
-
 function renderingInformationBlock() {
     var createInformationBlock = document.createElement('div'),
         title = document.createElement('h5');
@@ -50,25 +52,33 @@ function renderingInformationBlock() {
     header.append(createInformationBlock);
     setInterval(function () {
         var scrollTracking = window.pageYOffset;
-        if (scrollTracking > 88) {
+        if (scrollTracking > 58) {
             createInformationBlock.className = 'scrollTrackingActive';
+            rightTopBlock.removeClass('voice-information-block');
+            rightTopBlock.addClass('voice-information-block-active');
+            setTimeout(function () {
+                rightTopBlock.fadeOut(3000, function () {
+                    $(this).css({'display':'none'});
+                })
+            }, 1500)
         } else {
             createInformationBlock.className = 'leftInformationBlock';
+            rightTopBlock.removeClass('voice-information-block-active');
+            rightTopBlock.addClass('voice-information-block');
         }
+        console.log(scrollTracking);
     }, 200)
 }
 
 /*** Voice analysis ***/
 function speech() {
     recognizer.start();
-    microphone.css({'background': '#f25f43', 'color': '#2a2a2a'});
+    microphone.css({'background': '#123f58', 'color': '#caffcf'});
 
     /** Создаём callback **/
     recognizer.onresult = function (event) {
         var result = event.results[event.resultIndex],
-            informationStorage = '',
-            voiceScroll = window.pageYOffset,
-            screenHeight = screen.height;
+            informationStorage = '';
         if (result.isFinal) {
             informationStorage = result[0].transcript;
             finalResultVoice.val(result[0].transcript);
@@ -92,103 +102,16 @@ function speech() {
             case ('найти автора'):
                 window.location.href = 'https://new.vk.com/0nesuch07';
                 break;
-            case ('ниже'):
-                screenHeight += screenHeight;
-                voiceScroll = screenHeight;
-                console.log(screenHeight, 'Сработано screenHeight\n', voiceScroll, 'Получение voiceScroll вниз');
-                break;
             default:
                 console.log(result[0].transcript);
-                return microphone.css({'background': '#292929', 'color': '#f25f43'});
+                return microphone.css({'background': '#123f58', 'color': '#caffcf'});
         }
     }
-}
-//
-// /*** Ajax reverse form ***/
-// reverseForm.submit(function () {
-//     $.ajax({
-//         type: "POST",
-//         url: "mail.php",
-//         data: $(this).serialize()
-//     }).done(function () {
-//         alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-//         reverseForm[0].reset();
-//     });
-//     return false;
-// });
-
-weGetTheScreenResolution();
-function weGetTheScreenResolution() {
-    var searchImageOne = $('#search-image-one'),
-        searchImageTwo = $('#search-image-two'),
-        searchImageThree = $('#search-image-three'),
-        searchTextOne = $('#search-text-one'),
-        searchTextTwo = $('#search-text-two'),
-        searchTextThree = $('#search-text-three');
-
-    /*** Animate Rotate Scroll ***/
-    setInterval(function () {
-        if (innerWidth > 980) {
-            var animated = window.pageYOffset;
-            if (animated >= 2900 && animated <= 3849) {
-                searchImageOne.css({'transition': 'all 2s', 'transform': 'rotate(0deg) translateX(0)', 'opacity': '1'});
-                searchTextOne.css({'transition': 'all 2s', 'transform': 'rotate(0deg) translateX(0)', 'opacity': '1'})
-            } else {
-                searchImageOne.css({
-                    'transition': 'all 1s', 'transform': 'rotate(-45deg) translate(-200px)', 'opacity': '0'
-                });
-                searchTextOne.css({
-                    'transition': 'all 1s', 'transform': 'rotate(45deg) translate(200px)', 'opacity': '0'
-                });
-            }
-            if (animated >= 3449 && animated <= 4349) {
-                searchImageTwo.css({'transition': 'all 2s', 'transform': 'rotate(0deg) translateX(0)', 'opacity': '1'});
-                searchTextTwo.css({'transition': 'all 2s', 'transform': 'rotate(0deg) translateX(0)', 'opacity': '1'})
-            } else {
-                searchImageTwo.css({
-                    'transition': 'all 1s', 'transform': 'rotate(-45deg) translate(-200px)', 'opacity': '0'
-                });
-                searchTextTwo.css({
-                    'transition': 'all 1s',
-                    'transform': 'rotate(45deg) translate(200px)', 'opacity': '0'
-                });
-            }
-            if (animated >= 4111 && animated <= 4811) {
-                searchImageThree.css({
-                    'transition': 'all 2s', 'transform': 'rotate(0deg) translateX(0)', 'opacity': '1'
-                });
-                searchTextThree.css({'transition': 'all 2s', 'transform': 'rotate(0deg) translateX(0)', 'opacity': '1'})
-            } else {
-                searchImageThree.css({
-                    'transition': 'all 1s', 'transform': 'rotate(-45deg) translate(-200px)', 'opacity': '0'
-                });
-                searchTextThree.css({
-                    'transition': 'all 1s', 'transform': 'rotate(45deg) translate(200px)', 'opacity': '0'
-                });
-            }
-        } else {
-            return false;
-        }
-    }, 200);
 }
 
 $(document).ready(function () {
 
     /*** Show and hide header panel ***/
-    setInterval(function () {
-        var scrollTracking = window.pageYOffset;
-        var widthScreenBrowser = window.innerWidth;
-        if (widthScreenBrowser < 980) {
-            voiceInformationBlock.css({'display': 'none'});
-        } else if (scrollTracking > 88) {
-            voiceInformationBlock.css({'top': '45px'});
-            voiceInformationBlock.fadeOut(5000, function () {
-                $(this).css({'display': 'none'});
-            });
-        } else {
-            voiceInformationBlock.css({'display': 'block', 'top': '140px'});
-        }
-    }, 200);
     searchMeLocation.click(function () {
         logic = !logic;
         if (!logic) {
@@ -236,9 +159,8 @@ $(document).ready(function () {
         event.preventDefault();
         var id = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top - 45}, 1500);
+        $('body,html').animate({scrollTop: top - 42}, 1500);
     });
-
     upScroll.on("click", "a", function (event) {
         event.preventDefault();
         var id = $(this).attr('href'),
@@ -266,12 +188,11 @@ $(function() {
         var th = $(this);
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "mail.php",
             data: th.serialize()
         }).done(function() {
             alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
             setTimeout(function() {
-                // Done Functions
                 th.trigger("reset");
             }, 200);
         });

@@ -22,7 +22,7 @@
             $node = $(node);
 
 
-        var tubularContainer = '<div id="tubular-container" style="overflow:hidden; position:absolute; left:0; right:0; top:0; bottom:0; z-index:1;opacity:.2;"><div id="tubular-player" style="position: relative; width: 100%; height: 950px;"></div></div><div id="tubular-shield" style=" position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 2;"></div>';
+        var tubularContainer = '<div id="tubular-container" style="overflow:hidden; position:absolute; left:0; right:0; top:0; bottom:0; z-index:1;opacity:.3;"><div id="tubular-player" style="position: relative; width: 100%; height: 950px;"></div></div><div id="tubular-shield" style=" position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 2;"></div>';
 
         $body.prepend(tubularContainer);
         $node.className = 'three-section';
