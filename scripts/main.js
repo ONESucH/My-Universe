@@ -10,6 +10,7 @@ var reverseForm = $('.reverse-form'),
     dataStorage = ['связаться с автором', 'найти автора на карте', 'найти автора'],
     recognizer = new webkitSpeechRecognition(),
     upScroll = $('.up-scroll'),
+    fiveSection = $('.five-section'),
     logo = $('.logo'),
     logic = true;
 
@@ -20,8 +21,8 @@ recognizer.interimResults = true;
 
 /*** Information blocks for voice control ***/
 /*** Max and min width screen ***/
-test();
-function test() {
+valuesHandler();
+function valuesHandler() {
     var widthScreenBrowser = window.innerWidth;
     if (widthScreenBrowser <= 490) {
         rightTopBlock.css({'display':'none'});
@@ -30,6 +31,7 @@ function test() {
         renderingInformationBlock();
     }
 }
+
 function renderingInformationBlock() {
     var createInformationBlock = document.createElement('div'),
         title = document.createElement('h5');
@@ -66,7 +68,6 @@ function renderingInformationBlock() {
             rightTopBlock.removeClass('voice-information-block-active');
             rightTopBlock.addClass('voice-information-block');
         }
-        console.log(scrollTracking);
     }, 200)
 }
 
@@ -108,6 +109,25 @@ function speech() {
         }
     }
 }
+
+$(window).bind('scroll', function() {
+    var vScroll = $(this).scrollTop();
+    if (vScroll > fiveSection.offset().top - 350) {
+        show_graphics();
+    }
+});
+function show_graphics() {
+    $(window).unbind('scroll');
+    $('.circlestat').circliful();
+}
+// $(window).scroll(function() {
+//     var vScroll = $(this).scrollTop();
+//     if (vScroll > fiveSection.offset().top - 300) {
+//         ('.circlestat').circliful();
+//         return false;
+//     }
+//     console.log(vScroll);
+// });
 
 $(document).ready(function () {
 

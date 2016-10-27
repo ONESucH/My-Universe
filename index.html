@@ -59,7 +59,7 @@
         <li><a href="#men2">Работы</a></li>
         <li><a href="#men3">Обо мне</a></li>
         <li><a href="#men4">Термины</a></li>
-        <li><a href="#">Заглушка</a></li>
+        <li><a href="#men5">Навыки</a></li>
         <li><a href="#">Заглушка</a></li>
     </ul>
 </div>
@@ -118,18 +118,70 @@
             </ul>
         </div>
         <div class="iphone-block">
-            <div class="iphone-blue wow slideInLeft" data-wow-delay="1.5s" data-wow-duration="2s">
+            <div class="iphone-blue wow slideInLeft" data-wow-delay="1s" data-wow-duration="2s">
                 <div class="left-window"></div>
             </div>
-            <div class="iphone-yellow">
+            <div class="iphone-yellow wow bounceInDown" data-wow-delay="1s" data-wow-duration="2s">
                 <div class="center-window"></div>
             </div>
-            <div class="iphone-red wow slideInRight" data-wow-delay="1.5s" data-wow-duration="2s">
+            <div class="iphone-red wow slideInRight" data-wow-delay="1s" data-wow-duration="2s">
                 <div class="right-window"></div>
             </div>
         </div>
     </div>
-</div>
+    <div class="five-section" id="men5">
+        <h2>Мои навыки</h2>
+        <div class="wrap">
+            <div class="row">
+                <div class="circle-container wow slideInLeft" data-wow-delay="0.5s" data-wow-duration="2s">
+                    <h3>Html5</h3>
+                    <div class="circlestat" data-dimension="200" data-text="85%" data-width="30" data-fontsize="38" data-percent="85" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+                </div>
+                <div class="circle-container wow bounceInDown" data-wow-delay="0.5s" data-wow-duration="2s">
+                    <h3>Css3</h3>
+                    <div class="circlestat" data-dimension="200" data-text="84%" data-width="30" data-fontsize="38" data-percent="84" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+                </div>
+                <div class="circle-container wow bounceInDown" data-wow-delay="0.5s" data-wow-duration="2s">
+                    <h3>JavaScript</h3>
+                    <div class="circlestat" data-dimension="200" data-text="65%" data-width="30" data-fontsize="38" data-percent="65" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+                </div>
+                <div class="circle-container wow slideInRight" data-wow-delay="0.5s" data-wow-duration="2s">
+                    <h3>Jquery</h3>
+                    <div class="circlestat" data-dimension="200" data-text="75%" data-width="30" data-fontsize="38" data-percent="75" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+            </div>
+            <div class="row">
+                <div class="circle-container wow slideInLeft" data-wow-delay="0.5s" data-wow-duration="2s">
+                    <h3>Gulp</h3>
+                    <div class="circlestat" data-dimension="200" data-text="85%" data-width="30" data-fontsize="38" data-percent="85" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+                </div>
+                <div class="circle-container wow tada" data-wow-delay="0.5s" data-wow-duration="2s">
+                    <h3>Bower</h3>
+                    <div class="circlestat" data-dimension="200" data-text="98%" data-width="30" data-fontsize="38" data-percent="98" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+                </div>
+                <div class="circle-container wow slideInRight" data-wow-delay="0.5s" data-wow-duration="2s">
+                    <h3>Ajax</h3>
+                    <div class="circlestat" data-dimension="200" data-text="90%" data-width="30" data-fontsize="38" data-percent="90" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+                </div>
+                <div class="row">
+                    <div class="circle-container wow slideInLeft" data-wow-delay="0.5s" data-wow-duration="2s">
+                        <h3>Bootstrap</h3>
+                        <div class="circlestat" data-dimension="200" data-text="70%" data-width="30" data-fontsize="38" data-percent="70" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+                    </div>
+                    <div class="circle-container wow bounceInUp" data-wow-delay="0.5s" data-wow-duration="2s">
+                        <h3>WordPress</h3>
+                        <div class="circlestat" data-dimension="200" data-text="25%" data-width="30" data-fontsize="38" data-percent="25" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+                    </div>
+                    <div class="circle-container wow bounceInUp" data-wow-delay="0.5s" data-wow-duration="2s">
+                        <h3>Less</h3>
+                        <div class="circlestat" data-dimension="200" data-text="95%" data-width="30" data-fontsize="38" data-percent="95" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+                    </div>
+                    <div class="circle-container wow slideInRight" data-wow-delay="0.5s" data-wow-duration="2s">
+                        <h3>Git</h3>
+                        <div class="circlestat" data-dimension="200" data-text="80%" data-width="30" data-fontsize="38" data-percent="80" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 <div class="footer">
     <div class="assistance-unit">
         <h2>Если Вам нравится мои работы,<br>свяжитесь со мной.</h2>
@@ -168,6 +220,8 @@
     loadCSS("scripts/scriptVideoBackground/reset.css");
     loadCSS("scripts/scriptVideoBackground/style.css");
     loadCSS("vendor/wow/css/libs/animate.css");
+    loadCSS("scripts/animate-circle/jquery.circliful.css");
+    loadCSS("scripts/animate-circle/animate-circle.css");
     loadCSS("_header.css");
     loadCSS("_main.css");
     loadCSS("_media.css");
@@ -185,7 +239,8 @@
     {"src" : "vendor/jquery/dist/jquery.min.js", "async" : false},
     {"src" : "scripts/modernizr/modernizr.js", "async" : false},
     {"src" : "scripts/waypoints/waypoints.min.js", "async" : false},
-    {"src" : "vendor/wow/dist/wow.min.js", "async" : false},
+    {"src" : "vendor/wow/dist/wow.min.js", "async" : false},    {"src" : "scripts/animate-circle/jquery.circliful.min.js", "async" : false},
+
     {"src" : "scripts/plugins-scroll/plugins-scroll.js", "async" : false},
     {"src" : "scripts/scriptVideoBackground/jquery.tubular.1.0.js", "async" : false},
     {"src" : "scripts/fancyBox/jquery.mousewheel-3.0.6.pack.js", "async" : false},
