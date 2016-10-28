@@ -120,14 +120,6 @@ function show_graphics() {
     $(window).unbind('scroll');
     $('.circlestat').circliful();
 }
-// $(window).scroll(function() {
-//     var vScroll = $(this).scrollTop();
-//     if (vScroll > fiveSection.offset().top - 300) {
-//         ('.circlestat').circliful();
-//         return false;
-//     }
-//     console.log(vScroll);
-// });
 
 $(document).ready(function () {
 
@@ -215,6 +207,9 @@ $(function() {
             setTimeout(function() {
                 th.trigger("reset");
             }, 200);
+            reverseForm.fadeOut('slow', function () {
+                reverseForm.css({'display': 'none'});
+            });
         });
         return false;
     });

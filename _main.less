@@ -12,7 +12,7 @@
 @li-border-top: #caffcf;
 @li-border-left-right: rgba(41, 41, 41, 0.51);
 @li-color: #caffcf;
-@li-color-hover: #2a2a2a;
+@li-color-hover: #ffffff;
 @p-color: #123f58;
 @p-color-animate-blocks: #caffcf;
 @p-color-feedback-form: #caffcf;
@@ -37,7 +37,7 @@
 @button-border-hover: #313e52;
 @input-boxShadow: #313E52;
 @input-border: #67809f;
-@input-color: #fff;
+@input-color: #123f58;
 @a-image-hover: #f25f43;
 @a-background: #123f58;
 @a-background-hover: #caffcf;
@@ -111,7 +111,7 @@ body {
   position: absolute;
   width: 100%;
   height: 350px;
-  top: 42px;
+  top: 44px;
   text-align: center;
   z-index: 5;
   img {
@@ -125,18 +125,19 @@ body {
   width: 100%;
   height: 350px;
   z-index: 1;
-  top: 42px;
+  top: 44px;
   text-align: center;
   vertical-align: middle;
   background: @revers-form-background;
   h2 {
     padding: 30px 0;
-    color: @h2-color;
+    color: @h2-color-footer-block;
   }
   input {
     border-radius: 5px;
     box-shadow: inset 0 0 1px 1px @input-boxShadow;
     border: none;
+    color: @input-color;
     padding: 10px;
     margin: 10px;
     width: 25%;
@@ -610,10 +611,12 @@ body {
   bottom: 25px;
   right: 25px;
   z-index: 3;
+  line-height: 10px;
   i {
     border-radius: 100%;
     width: 40px;
     height: 40px;
+    line-height: 36px;
     font-size: 35px;
     cursor: pointer;
     background: @i-background;
@@ -721,7 +724,7 @@ body {
     }
     i {
       width: 22px;
-      padding: 4px;
+      padding: 4px 1px;
       margin: 4px 5px 0 0;
     }
   }
@@ -741,7 +744,7 @@ body {
       font-size: 10px;
     }
     a {
-      width: 67px;
+      width: 64px;
       padding: 24px 2px;
     }
   }
@@ -919,16 +922,16 @@ body {
   }
 
   .up-scroll i {
-    width: 35px;
+    width: 38px;
     height: 35px;
-    padding-top: 4px;
-    font-size: 170%;
+    line-height: 30px;
+    font-size: 30px;
   }
 }
 
 @media (max-width: 490px) {
   .logo a {
-    width: 42px;
+    width: 38px;
     font-size: 9px;
     padding: 24px 2px;
   }
@@ -944,15 +947,21 @@ body {
   }
 
   .to-find-me input {
-    width: 145px;
+    width: 130px;
     text-align: center;
     font-size: 9px;
     text-transform: uppercase;
   }
 
-  .up-scroll i {
-    padding-top: 5px;
-    font-size: 150%;
+  .up-scroll {
+    right: 15px;
+    i {
+      width: 35px;
+      right: 2px;
+      height: 32px;
+      font-size: 25px;
+      line-height: 26px;
+    }
   }
 
   .feedback-form {
